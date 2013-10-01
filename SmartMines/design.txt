@@ -1,0 +1,18 @@
+def beginLeftDown():
+    if bombed or won:
+        reset()
+        return
+    
+    if not safeClick:
+        doIt()
+        return
+
+    if uncovered and autoMark:
+        mark()
+        return
+        
+    lower(uncoverable())
+
+def commitLeftDown():
+    if not safeClick:
+        return

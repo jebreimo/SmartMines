@@ -1,0 +1,75 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {"" = id; }; 
+            CLASS = FirstResponder; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = JbCustomGameDialogController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {delegate = id; }; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {
+            ACTIONS = {
+                newCustomGame = id; 
+                selectGame = id; 
+                showHighScores = id; 
+                showManual = id; 
+                terminate = id; 
+            }; 
+            CLASS = JbGameMenuController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                customGameWindowController = JbCustomGameDialogController; 
+                customGamesMenu = NSMenu; 
+                gameMenu = NSMenu; 
+                highScoresWindowController = JbHighScoresWindowController; 
+                minefieldController = JbMinefieldController; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = JbHighScoresWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {
+            ACTIONS = {
+                addHighScoreEntry = id; 
+                cancelHighScoreEntry = id; 
+                keyboardEnabledChanged = id; 
+                newCustomGame = id; 
+                newGame = id; 
+                pauseGame = id; 
+                selectGame = id; 
+                showHighScores = id; 
+                terminate = id; 
+                usesEasyStartChanged = id; 
+                usesQuestionMarksChanged = id; 
+                usesSafeUncoverChanged = id; 
+                usesSmartMarkChanged = id; 
+                usesSmartUncoverChanged = id; 
+            }; 
+            CLASS = JbMinefieldController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                keyboardMenuItem = NSMenuItem; 
+                mineImageView = NSImageView; 
+                minefieldView = JbMinefieldView; 
+                playerNameDialog = NSWindow; 
+                watchImageView = NSImageView; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = JbMinefieldView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {delegate = id; }; 
+            SUPERCLASS = NSView; 
+        }
+    ); 
+    IBVersion = 1; 
+}

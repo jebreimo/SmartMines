@@ -1,0 +1,15 @@
+[2007-09-27: VERSION 1.20]
+[NEW] Keyboard mode: the game is now playable without a mouse.
+[NEW] The game now pauses automatically when its window is hidden (previously this only happened when the window was miniaturized).
+[NEW] Added a "Close" button to the Highscore window.
+[FIXED] Changing the name in the "New highscore entry" window had no effect.
+
+[2007-04-22: VERSION 1.10]
+[NEW] New option "Safer Uncover." When this is enabled (the standard behavior of the previous version), the uncover operation is cancelled if the mouse cursor is moved outside the clicked square while the mouse button is pressed. When this is disabled, the uncover operation is only cancelled when the mouse cursor is moved outside the minefield. This allows for slightly quicker gameplay, but also makes it easier to click the wrong square.
+[NEW] Right mouse button (or ctrl + left mouse button) can now start new a game and clear the minefield after the previous one is over. In the previous version, this could only be done with the left mouse button.
+[NEW] It's no longer possible to mark squares unless at least one of the neighboring squares has been uncovered. Such marks tend to be made by mistake and can be frustrating to remove.
+[FIXED] Releasing the control key before the mouse button while control-clicking would cancel any uncover operation and leave unmarked squares in a depressed state.
+[NEW] Pause. It's now possible to pause the game, either from the file menu or by miniaturizing the window. The game can also be resumed from file menu or by clicking on the minefield.
+
+[2007-04-07: VERSION 1.01]
+[FIXED] Squares with 6 mines next to it will no longer display the number 7 and vice versa.

@@ -1,0 +1,12 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = JbHighScoresWindowController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {gamePopUp = NSPopUpButton; highScoreList = id; }; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

@@ -1,0 +1,165 @@
+Lb-init:
+    automark
+    lower
+Lb-commit
+    uncover
+
+Rb-init:
+    mark
+    autolower
+Rb-commit
+    autouncover
+
+struct JBTableIndex:
+    row: unsigned
+    column: unsigned
+    JBMakeTableIndex(row: unsigned, column: unsigned): JBTableIndex
+    JBEqualTableIndices(a: JBTableIndex, b: JBTableIndex): BOOL
+
+struct JBTableSize: 
+    numberOfRows: unsigned
+    numberOfColumns: unsigned
+    JBMakeTableSize(numberOfRows: unsigned, numberOfColumns: unsigned): JBTableSize
+    JBEqualTableSizes(a: JBTableSize, b: JBTableSize): BOOL
+
+struct JBTableRect:
+    fromIndex: JBTableIndex
+    size: JBTableSize
+    JBMakeTableRect(fromRow: unsigned, fromColumn: unsigned, rows: unsigned, columns: unsigned): JBMakeTableRange
+    JBTableRectUpperBound(rect: JBTableRect): JBTableIndex 
+
+struct JBTableIterator:
+    index: JBTableIndex
+    endsAt: JBTableIndex
+    JBMakeTableIterator(rect: JBTableRect): JBTableIterator
+    JBTableIteratorNext(iterator: JBTableIterator*): BOOL
+    JBResetTableIterator(iterator: JBTableIterator*, rect: JBTableRect) 
+
+class JBObjectTable:
+    initWithSize:prototype:(size: JBTableSize, prototype: id): JBTable*
+    size: JBTableSize
+    objectAt:(index: JBTableIndex): NSObject*
+    setObject:atIndex:(object: NSObject*, index: JBTableIndex) 
+
+class JBMinefieldDelegate:
+    initiateMouseDownInView:atIndex:(view: JBMinefieldView*, index: JBTableIndex)
+    cancelMouseDownInView:atIndex:(view: JBMinefieldView*, index: JBTableIndex)
+    mouseClickedInView:atIndex:(view: JBMinefieldView*, index: JBTableIndex) 
+    initiateRigtMouseDownInView:atIndex:(view: JBMinefieldView*, index: JBTableIndex)
+    cancelRightMouseDownInView:atIndex:(view: JBMinefieldView*, index: JBTableIndex)
+    rightMouseClickedInView:atIndex:(view: JBMinefieldView*, index: JBTableIndex) 
+
+enum JBGameDifficulty:
+    JBBeginner
+    JBIntermediate
+    JBAdvanced
+    JBCustom
+
+class JBMinefieldController(JBMinefieldDelegate):
+    rows: unsigned
+    columns: unsigned
+    mines: unsigned 
+    difficulty: JBGameDifficulty
+    isUsingQuestionMarks: BOOL
+    isUsingAutoMarks: BOOL
+    isUsingAutoUncover: BOOL
+
+struct JB<Value>Table:
+    size: JBTableSize
+    values: Value*
+    rows: Value**
+    JB<Value>TableCreate(size: JBTableSize): JB<Value>Table*
+    JB<Value>TableFree(table: JB<Value>Table*) 
+    JB<Value>TableGetValueAtIndex(table: JB<Value>Table*, index: JBTableIndex): Value
+    JB<Value>TableSetValueAtIndex(table: JB<Value>Table*, index: JBTableIndex, value: Value)
+    JB<Value>TableSetAllValues(table: JB<Value>Table*, value: Value) 
+    JB<Value>TableGetRawIterators(table: JB<Value>Table*, Value** begin, Value** end)
+
+struct JBObjectTable:
+    size: JBTableSize
+    objects: NSObject*[][]
+    JBObjectTableCreate(size: JBTableSize): JBObjectTable* 
+    JBObjectTableFree(table: JBObjectTable*)
+    JBObjectTableGetObjectAtIndex(table: JBObjectTable*, index: JBTableIndex): NSObject*
+    JBObjectTableSetObjectAtIndex(table: JBObjectTable*, index: JBTableIndex, object: NSObject*) 
+    JBObjectTableFillWithCopiesOf(table: JBObjectTable*, object: NSObject*)
+    JBObjectTableGetRawIterators(table: JBObjectTable*, NSObject*** begin, NSObject*** end)
+
+enum JBMinefieldSquareState:
+    JBUncovered
+    JBUnmarked
+    JBMarked 
+    JBQuestionMarked
+
+struct JBMinefieldSquare:
+    numberOfNeighboringSquares: unsigned 
+    state: JBMinefieldSquareState
+    hasMine: BOOL
+
+enum JBMinefieldState:
+    JBNotCompleted
+    JBCompleted
+    JBBlownUp
+
+class JBMinefield:
+    -mSquares: JBMinefieldSquare[][]
+    useQuestionMarks: BOOL
+    
+    minefieldState: JBMinefieldState <-
+    numberOfMines: unsigned <- 
+    numberOfMarks: unsigned <-
+    numberOfCoveredSquares: unsigned <-
+    squaresAffectedByLastMove: JBTableIndex[] <-
+
+    numberOfNeighboringMinesAtIndex:(index: JBTableIndex): unsigned
+    hasMineAtIndex:(index: JBTableIndex): BOOL 
+    stateAtIndex:(index: JBTableIndex): JBMinefieldSquareState
+    neighboringUnmarkedSquaresAtIndex:(index: JBTableIndex): JBTableIndex[]
+
+    !minefieldWithSize:numberOfMines:safeArea:(size: JBTableSize, nMines: unsigned, safeArea: JBTableRect): JBMinefield* 
+    initWithSize:numberOfMines:safeArea:(size: JBTableSize, nMines: unsigned, safeArea: JBTableRect): JBMinefield*
+    
+    markAtIndex:(index: JBTableIndex)
+    autoMarkAtIndex:(index: JBTableIndex)
+    uncoverAtIndex:(index: JBTableIndex) 
+    autoUncoverAtIndex:(index: JBTableIndex)
+
+    -computeNeighboringMineNumbers()
+    -uncoverUnmarkedSquaresWithin:(rect: JBTableRect)
+    -internalUncoverAtIndex:(index: JBTableIndex)
+    -neighborRectAt:(index: JBTableIndex): JBTableRect 
+
+enum JBSquareFrameType:
+    JBSquareFrameRaised
+    JBSquareFrameLowered
+
+class JBSquareInfo:
+    text: NSString*
+    backgroundColor: NSColor*
+    textColor: NSColor*
+    image: NSIMage*
+    frameType: FrameType
+    copyWithZone:(zone: NSZone*): JBSquareInfo*
+
+class JBMinefieldView:
+    -mSquares: JBObjectTable<JBSquareInfo>
+    font: NSFont*
+    minefieldSize: JBTableSize
+    delegate: JBMinefieldDelegate: 
+
+    frame[index: JBTableIndex]: FrameType
+    text[index: JBTableIndex]: NSString*
+    textColor[index: JBTableIndex]: NSColor*
+    backgroundColor[index: JBTableIndex]: NSColor*
+    image[index: JBTableIndex]: NSImage* 
+
+    frameAt:(index: JBTableIndex): FrameType
+    setFrame:atIndex:(frame: FrameType, index: JBTableIndex)
+    textAt:(index: JBTableIndex): NSString*
+    setText:atIndex(text: NSString*, index: JBTableIndex) 
+    textColorAt:(index: JBTableIndex): NSColor*
+    setTextColor:atIndex(text: NSColor*, index: JBTableIndex)
+    backgroundColorAt:(index: JBTableIndex): NSColor*
+    setBackgroundColor:atIndex(text: NSColor*, index: JBTableIndex) 
+    imageAt:(index: JBTableIndex): NSImage*
+    setImage:atIndex(image: NSImage*, index: JBTableIndex)

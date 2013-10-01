@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2F07BB110BA39B0C00F2F0EE /* GameMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F07BB100BA39B0C00F2F0EE /* GameMenuController.m */; };
+		2F20AD120BB87FF90050EE18 /* HappyMine.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2F20AD110BB87FF90050EE18 /* HappyMine.pdf */; };
+		2F2A00E40B793016005F670C /* ThumbsUp.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2F2A00E30B793016005F670C /* ThumbsUp.pdf */; };
+		2F2A00EB0B7A9232005F670C /* HighScores.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2A00EA0B7A9232005F670C /* HighScores.m */; };
+		2F3843720B88987000F34A66 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F38436F0B88987000F34A66 /* Game.m */; };
+		2F3843730B88987000F34A66 /* GameCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F3843710B88987000F34A66 /* GameCollection.m */; };
+		2F4DD1AF0BB3365A0066FC0A /* UserManual.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2F4DD1AE0BB3365A0066FC0A /* UserManual.pdf */; };
+		2F75FECF0BDD3E35004197FD /* BoolToStringTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F75FECC0BDD3E35004197FD /* BoolToStringTransformer.m */; };
+		2F75FED00BDD3E35004197FD /* Stopwatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F75FECE0BDD3E35004197FD /* Stopwatch.m */; };
+		2F7C9F040BACA50E00D905F7 /* EvilGrinMine.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2F7C9F030BACA50E00D905F7 /* EvilGrinMine.pdf */; };
+		2F7C9F060BACA53600D905F7 /* SadMine.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2F7C9F050BACA53600D905F7 /* SadMine.pdf */; };
+		2F8CA0ED0B4B051700648278 /* MinefieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8CA0EC0B4B051700648278 /* MinefieldView.m */; };
+		2F8CA0F80B4B274700648278 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2F8CA0F60B4B274700648278 /* Credits.rtf */; };
+		2F8CA1040B4F197800648278 /* TableIndexList.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8CA1030B4F197800648278 /* TableIndexList.m */; };
+		2F8CA1070B4F1BA400648278 /* Table.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8CA1060B4F1BA400648278 /* Table.m */; };
+		2F8CA11C0B4F23C000648278 /* Table.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8CA1060B4F1BA400648278 /* Table.m */; };
+		2F8CA11D0B4F23C000648278 /* TableIndexList.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8CA1030B4F197800648278 /* TableIndexList.m */; };
+		2F8CA1200B4F23D500648278 /* TableIndexListUnitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8CA11F0B4F23D500648278 /* TableIndexListUnitTest.m */; };
+		2F8CA1270B52FCA600648278 /* Minefield.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8CA1260B52FCA600648278 /* Minefield.m */; };
+		2F9383CA0B910E530039647A /* CustomGameDialogController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9383C90B910E530039647A /* CustomGameDialogController.m */; };
+		2F9383EA0B93962C0039647A /* GameMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9383E90B93962C0039647A /* GameMenuItem.m */; };
+		2FBC342D0B62794300299869 /* MineWithShadow.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2FBC342C0B62794300299869 /* MineWithShadow.pdf */; };
+		2FBC34300B62830F00299869 /* Flag.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2FBC342E0B62830F00299869 /* Flag.pdf */; };
+		2FBC34310B62830F00299869 /* Mine.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2FBC342F0B62830F00299869 /* Mine.pdf */; };
+		2FBC34370B62E2C100299869 /* Stopwatch.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2FBC34360B62E2C100299869 /* Stopwatch.pdf */; };
+		2FBC34390B62F21700299869 /* TransparentMine.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2FBC34380B62F21700299869 /* TransparentMine.pdf */; };
+		2FBC34830B63A28100299869 /* HighScores.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2FBC347F0B63A28100299869 /* HighScores.nib */; };
+		2FBC34840B63A28100299869 /* CustomGame.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2FBC34810B63A28100299869 /* CustomGame.nib */; };
+		2FBC348B0B656CCE00299869 /* Mine.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2FBC348A0B656CCE00299869 /* Mine.icns */; };
+		2FCEC1BD0B83CDE400233FEE /* HighScoresWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FCEC1BC0B83CDE400233FEE /* HighScoresWindowController.m */; };
+		2FE16CD70B54387400047A4D /* MinefieldController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FE16CD60B54387400047A4D /* MinefieldController.m */; };
+		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2F8CA11A0B4F239400648278 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2F8CA1130B4F234800648278;
+			remoteInfo = MinesUnitTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		2F07BB0F0BA39B0C00F2F0EE /* GameMenuController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = GameMenuController.h; sourceTree = "<group>"; };
+		2F07BB100BA39B0C00F2F0EE /* GameMenuController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = GameMenuController.m; sourceTree = "<group>"; };
+		2F20AD040BB86FC20050EE18 /* Mine2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mine2.png; sourceTree = "<group>"; };
+		2F20AD110BB87FF90050EE18 /* HappyMine.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = HappyMine.pdf; sourceTree = "<group>"; };
+		2F2A00E30B793016005F670C /* ThumbsUp.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ThumbsUp.pdf; sourceTree = "<group>"; };
+		2F2A00E90B7A9232005F670C /* HighScores.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = HighScores.h; sourceTree = "<group>"; };
+		2F2A00EA0B7A9232005F670C /* HighScores.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = HighScores.m; sourceTree = "<group>"; };
+		2F38436E0B88987000F34A66 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		2F38436F0B88987000F34A66 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
+		2F3843700B88987000F34A66 /* GameCollection.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = GameCollection.h; sourceTree = "<group>"; };
+		2F3843710B88987000F34A66 /* GameCollection.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = GameCollection.m; sourceTree = "<group>"; };
+		2F4DD1AE0BB3365A0066FC0A /* UserManual.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = UserManual.pdf; sourceTree = "<group>"; };
+		2F75FECB0BDD3E34004197FD /* BoolToStringTransformer.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = BoolToStringTransformer.h; sourceTree = "<group>"; };
+		2F75FECC0BDD3E35004197FD /* BoolToStringTransformer.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = BoolToStringTransformer.m; sourceTree = "<group>"; };
+		2F75FECD0BDD3E35004197FD /* Stopwatch.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Stopwatch.h; sourceTree = "<group>"; };
+		2F75FECE0BDD3E35004197FD /* Stopwatch.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = Stopwatch.m; sourceTree = "<group>"; };
+		2F7C9F030BACA50E00D905F7 /* EvilGrinMine.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = EvilGrinMine.pdf; sourceTree = "<group>"; };
+		2F7C9F050BACA53600D905F7 /* SadMine.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = SadMine.pdf; sourceTree = "<group>"; };
+		2F8CA0EB0B4B051700648278 /* MinefieldView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MinefieldView.h; sourceTree = "<group>"; };
+		2F8CA0EC0B4B051700648278 /* MinefieldView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MinefieldView.m; sourceTree = "<group>"; };
+		2F8CA0F70B4B274700648278 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Credits.rtf; sourceTree = "<group>"; };
+		2F8CA1020B4F197800648278 /* TableIndexList.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TableIndexList.h; sourceTree = "<group>"; };
+		2F8CA1030B4F197800648278 /* TableIndexList.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = TableIndexList.m; sourceTree = "<group>"; };
+		2F8CA1050B4F1BA400648278 /* Table.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Table.h; sourceTree = "<group>"; };
+		2F8CA1060B4F1BA400648278 /* Table.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = Table.m; sourceTree = "<group>"; };
+		2F8CA1140B4F234800648278 /* MinesUnitTest.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MinesUnitTest.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F8CA1150B4F234800648278 /* MinesUnitTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MinesUnitTest-Info.plist"; sourceTree = "<group>"; };
+		2F8CA11E0B4F23D500648278 /* TableIndexListUnitTest.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TableIndexListUnitTest.h; sourceTree = "<group>"; };
+		2F8CA11F0B4F23D500648278 /* TableIndexListUnitTest.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = TableIndexListUnitTest.m; sourceTree = "<group>"; };
+		2F8CA1250B52FCA600648278 /* Minefield.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Minefield.h; sourceTree = "<group>"; };
+		2F8CA1260B52FCA600648278 /* Minefield.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = Minefield.m; sourceTree = "<group>"; };
+		2F9383C80B910E530039647A /* CustomGameDialogController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CustomGameDialogController.h; sourceTree = "<group>"; };
+		2F9383C90B910E530039647A /* CustomGameDialogController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = CustomGameDialogController.m; sourceTree = "<group>"; };
+		2F9383E80B93962C0039647A /* GameMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = GameMenuItem.h; sourceTree = "<group>"; };
+		2F9383E90B93962C0039647A /* GameMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = GameMenuItem.m; sourceTree = "<group>"; };
+		2FBC342C0B62794300299869 /* MineWithShadow.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = MineWithShadow.pdf; sourceTree = "<group>"; };
+		2FBC342E0B62830F00299869 /* Flag.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Flag.pdf; sourceTree = "<group>"; };
+		2FBC342F0B62830F00299869 /* Mine.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Mine.pdf; sourceTree = "<group>"; };
+		2FBC34360B62E2C100299869 /* Stopwatch.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Stopwatch.pdf; sourceTree = "<group>"; };
+		2FBC34380B62F21700299869 /* TransparentMine.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = TransparentMine.pdf; sourceTree = "<group>"; };
+		2FBC34800B63A28100299869 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/HighScores.nib; sourceTree = "<group>"; };
+		2FBC34820B63A28100299869 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/CustomGame.nib; sourceTree = "<group>"; };
+		2FBC348A0B656CCE00299869 /* Mine.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Mine.icns; path = Icon/Mine.icns; sourceTree = "<group>"; };
+		2FCEC1BB0B83CDE400233FEE /* HighScoresWindowController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = HighScoresWindowController.h; sourceTree = "<group>"; };
+		2FCEC1BC0B83CDE400233FEE /* HighScoresWindowController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = HighScoresWindowController.m; sourceTree = "<group>"; };
+		2FE16CD50B54387400047A4D /* MinefieldController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MinefieldController.h; sourceTree = "<group>"; };
+		2FE16CD60B54387400047A4D /* MinefieldController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = MinefieldController.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* Mines_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mines_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* SmartMines.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartMines.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2F8CA1110B4F234800648278 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2F75FECB0BDD3E34004197FD /* BoolToStringTransformer.h */,
+				2F75FECC0BDD3E35004197FD /* BoolToStringTransformer.m */,
+				2F75FECD0BDD3E35004197FD /* Stopwatch.h */,
+				2F75FECE0BDD3E35004197FD /* Stopwatch.m */,
+				2F07BB0F0BA39B0C00F2F0EE /* GameMenuController.h */,
+				2F07BB100BA39B0C00F2F0EE /* GameMenuController.m */,
+				2F9383E80B93962C0039647A /* GameMenuItem.h */,
+				2F9383E90B93962C0039647A /* GameMenuItem.m */,
+				2F9383C80B910E530039647A /* CustomGameDialogController.h */,
+				2F9383C90B910E530039647A /* CustomGameDialogController.m */,
+				2F38436E0B88987000F34A66 /* Game.h */,
+				2F38436F0B88987000F34A66 /* Game.m */,
+				2F3843700B88987000F34A66 /* GameCollection.h */,
+				2F3843710B88987000F34A66 /* GameCollection.m */,
+				2FCEC1BB0B83CDE400233FEE /* HighScoresWindowController.h */,
+				2FCEC1BC0B83CDE400233FEE /* HighScoresWindowController.m */,
+				2F2A00E90B7A9232005F670C /* HighScores.h */,
+				2F2A00EA0B7A9232005F670C /* HighScores.m */,
+				2FE16CD50B54387400047A4D /* MinefieldController.h */,
+				2FE16CD60B54387400047A4D /* MinefieldController.m */,
+				2F8CA1250B52FCA600648278 /* Minefield.h */,
+				2F8CA1260B52FCA600648278 /* Minefield.m */,
+				2F8CA1050B4F1BA400648278 /* Table.h */,
+				2F8CA1060B4F1BA400648278 /* Table.m */,
+				2F8CA1020B4F197800648278 /* TableIndexList.h */,
+				2F8CA1030B4F197800648278 /* TableIndexList.m */,
+				2F8CA0EB0B4B051700648278 /* MinefieldView.h */,
+				2F8CA0EC0B4B051700648278 /* MinefieldView.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* SmartMines.app */,
+				2F8CA1140B4F234800648278 /* MinesUnitTest.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* SmartMines */ = {
+			isa = PBXGroup;
+			children = (
+				2F8CA1080B4F1BAC00648278 /* UnitTest */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				2F8CA1150B4F234800648278 /* MinesUnitTest-Info.plist */,
+			);
+			name = SmartMines;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* Mines_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DD1AE0BB3365A0066FC0A /* UserManual.pdf */,
+				2FBC348A0B656CCE00299869 /* Mine.icns */,
+				2FBC347F0B63A28100299869 /* HighScores.nib */,
+				2FBC34810B63A28100299869 /* CustomGame.nib */,
+				2FBC342E0B62830F00299869 /* Flag.pdf */,
+				2FBC342F0B62830F00299869 /* Mine.pdf */,
+				2F20AD040BB86FC20050EE18 /* Mine2.png */,
+				2F8CA0F60B4B274700648278 /* Credits.rtf */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
+				2FBC342C0B62794300299869 /* MineWithShadow.pdf */,
+				2FBC34360B62E2C100299869 /* Stopwatch.pdf */,
+				2FBC34380B62F21700299869 /* TransparentMine.pdf */,
+				2F2A00E30B793016005F670C /* ThumbsUp.pdf */,
+				2F7C9F030BACA50E00D905F7 /* EvilGrinMine.pdf */,
+				2F20AD110BB87FF90050EE18 /* HappyMine.pdf */,
+				2F7C9F050BACA53600D905F7 /* SadMine.pdf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2F8CA1080B4F1BAC00648278 /* UnitTest */ = {
+			isa = PBXGroup;
+			children = (
+				2F8CA11E0B4F23D500648278 /* TableIndexListUnitTest.h */,
+				2F8CA11F0B4F23D500648278 /* TableIndexListUnitTest.m */,
+			);
+			name = UnitTest;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2F8CA1130B4F234800648278 /* MinesUnitTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F8CA1170B4F234A00648278 /* Build configuration list for PBXNativeTarget "MinesUnitTest" */;
+			buildPhases = (
+				2F8CA10F0B4F234800648278 /* Resources */,
+				2F8CA1100B4F234800648278 /* Sources */,
+				2F8CA1110B4F234800648278 /* Frameworks */,
+				2F8CA1120B4F234800648278 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MinesUnitTest;
+			productName = MinesUnitTest;
+			productReference = 2F8CA1140B4F234800648278 /* MinesUnitTest.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+		8D1107260486CEB800E47090 /* SmartMines */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "SmartMines" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2F8CA11B0B4F239400648278 /* PBXTargetDependency */,
+			);
+			name = SmartMines;
+			productInstallPath = "$(HOME)/Applications";
+			productName = SmartMines;
+			productReference = 8D1107320486CEB800E47090 /* SmartMines.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Mines" */;
+			compatibilityVersion = "Xcode 2.4";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* SmartMines */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* SmartMines */,
+				2F8CA1130B4F234800648278 /* MinesUnitTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2F8CA10F0B4F234800648278 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */,
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				2F8CA0F80B4B274700648278 /* Credits.rtf in Resources */,
+				2FBC342D0B62794300299869 /* MineWithShadow.pdf in Resources */,
+				2FBC34300B62830F00299869 /* Flag.pdf in Resources */,
+				2FBC34310B62830F00299869 /* Mine.pdf in Resources */,
+				2FBC34370B62E2C100299869 /* Stopwatch.pdf in Resources */,
+				2FBC34390B62F21700299869 /* TransparentMine.pdf in Resources */,
+				2FBC34830B63A28100299869 /* HighScores.nib in Resources */,
+				2FBC34840B63A28100299869 /* CustomGame.nib in Resources */,
+				2FBC348B0B656CCE00299869 /* Mine.icns in Resources */,
+				2F2A00E40B793016005F670C /* ThumbsUp.pdf in Resources */,
+				2F7C9F040BACA50E00D905F7 /* EvilGrinMine.pdf in Resources */,
+				2F7C9F060BACA53600D905F7 /* SadMine.pdf in Resources */,
+				2F4DD1AF0BB3365A0066FC0A /* UserManual.pdf in Resources */,
+				2F20AD120BB87FF90050EE18 /* HappyMine.pdf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2F8CA1120B4F234800648278 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2F8CA1100B4F234800648278 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F8CA11C0B4F23C000648278 /* Table.m in Sources */,
+				2F8CA11D0B4F23C000648278 /* TableIndexList.m in Sources */,
+				2F8CA1200B4F23D500648278 /* TableIndexListUnitTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				2F8CA0ED0B4B051700648278 /* MinefieldView.m in Sources */,
+				2F8CA1040B4F197800648278 /* TableIndexList.m in Sources */,
+				2F8CA1070B4F1BA400648278 /* Table.m in Sources */,
+				2F8CA1270B52FCA600648278 /* Minefield.m in Sources */,
+				2FE16CD70B54387400047A4D /* MinefieldController.m in Sources */,
+				2F2A00EB0B7A9232005F670C /* HighScores.m in Sources */,
+				2FCEC1BD0B83CDE400233FEE /* HighScoresWindowController.m in Sources */,
+				2F3843720B88987000F34A66 /* Game.m in Sources */,
+				2F3843730B88987000F34A66 /* GameCollection.m in Sources */,
+				2F9383CA0B910E530039647A /* CustomGameDialogController.m in Sources */,
+				2F9383EA0B93962C0039647A /* GameMenuItem.m in Sources */,
+				2F07BB110BA39B0C00F2F0EE /* GameMenuController.m in Sources */,
+				2F75FECF0BDD3E35004197FD /* BoolToStringTransformer.m in Sources */,
+				2F75FED00BDD3E35004197FD /* Stopwatch.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2F8CA11B0B4F239400648278 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2F8CA1130B4F234800648278 /* MinesUnitTest */;
+			targetProxy = 2F8CA11A0B4F239400648278 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		29B97318FDCFA39411CA2CEA /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29B97319FDCFA39411CA2CEA /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+		2F8CA0F60B4B274700648278 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2F8CA0F70B4B274700648278 /* English */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		2FBC347F0B63A28100299869 /* HighScores.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2FBC34800B63A28100299869 /* English */,
+			);
+			name = HighScores.nib;
+			sourceTree = "<group>";
+		};
+		2FBC34810B63A28100299869 /* CustomGame.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2FBC34820B63A28100299869 /* English */,
+			);
+			name = CustomGame.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2F8CA1180B4F234A00648278 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(value)",
+					"$(DEVELOPER_FRAMEWORKS_DIR_QUOTED)",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				INFOPLIST_FILE = "MinesUnitTest-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Cocoa,
+					"-framework",
+					SenTestingKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = MinesUnitTest;
+				WRAPPER_EXTENSION = octest;
+				ZERO_LINK = NO;
+			};
+			name = Debug;
+		};
+		2F8CA1190B4F234A00648278 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(value)",
+					"$(DEVELOPER_FRAMEWORKS_DIR_QUOTED)",
+				);
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				INFOPLIST_FILE = "MinesUnitTest-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Cocoa,
+					"-framework",
+					SenTestingKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = MinesUnitTest;
+				WRAPPER_EXTENSION = octest;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = SmartMines;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = SmartMines;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_FAST_OBJC_DISPATCH = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_FAST_OBJC_DISPATCH = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2F8CA1170B4F234A00648278 /* Build configuration list for PBXNativeTarget "MinesUnitTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F8CA1180B4F234A00648278 /* Debug */,
+				2F8CA1190B4F234A00648278 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "SmartMines" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Mines" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
