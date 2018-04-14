@@ -330,6 +330,8 @@ static inline JbMinefieldSquare* GetSquare(JbMinefieldSquare** table,
             ++stats.coveredNeighbors;
             ++stats.questionMarkedNeighbors;
             break;
+        default:
+            break;
         }
     }
     stats.minedNeighbors = mSquares[idx.row][idx.column].minedNeighbors;
@@ -436,6 +438,8 @@ static inline JbMinefieldSquare* GetSquare(JbMinefieldSquare** table,
         break;
     case JbQuestionMarked:
         mSquares[idx.row][idx.column].state = JbUnmarked;
+        break;
+    default:
         break;
     }
     return [JbTableIndexList listWithValues:&idx count:1];

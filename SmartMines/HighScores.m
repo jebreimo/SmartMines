@@ -35,7 +35,7 @@ static NSString* ElapsedTimeKey = @"ElapsedTime";
 static NSString* PlayerNameKey = @"PlayerName";
 static NSString* DateKey = @"Date";
 enum {GamesWonIndex, GamesLostIndex};
-enum {MaxHighScoreEntries = 25};
+enum {MaxHighScoreEntries = 50};
 
 static NSComparisonResult CompareHighScoreEntries(id entryA, id entryB, void* context)
 {
@@ -52,14 +52,14 @@ static NSComparisonResult CompareHighScoreEntries(id entryA, id entryB, void* co
     return [entryDateA compare:entryDateB];
 }
 
-unsigned FindUpperBound(NSArray* highScores, NSNumber* elapsedTime)
+size_t FindUpperBound(NSArray* highScores, NSNumber* elapsedTime)
 {
-    unsigned min = 0, max = [highScores count];
+    size_t min = 0, max = [highScores count];
     if (max == 0)
         return 0;
     while (min < max)
     {
-        unsigned index = (max + min) / 2;
+        size_t index = (max + min) / 2;
         NSDictionary* entry = [highScores objectAtIndex:index];
         if ([elapsedTime compare:[entry objectForKey:ElapsedTimeKey]] == NSOrderedAscending)
             max = index;
@@ -124,7 +124,7 @@ unsigned FindUpperBound(NSArray* highScores, NSNumber* elapsedTime)
 
 - (unsigned)count
 {
-    return [mHighScores count];
+    return (unsigned)[mHighScores count];
 }
 
 - (NSString*)playerNameAtIndex:(unsigned)index
@@ -146,7 +146,7 @@ unsigned FindUpperBound(NSArray* highScores, NSNumber* elapsedTime)
 {
     assert(seconds != nil);
         
-    return FindUpperBound(mHighScores, seconds);
+    return (unsigned)FindUpperBound(mHighScores, seconds);
 }
 
 - (BOOL)isNewHighScoreEntry:(NSNumber*)seconds

@@ -32,7 +32,7 @@
 #import <stdlib.h>
 #import <assert.h>
 
-JbTableIndex JbMakeTableIndex(size_t row, size_t column)
+JbTableIndex JbMakeTableIndex(unsigned row, unsigned column)
 {
     JbTableIndex index = {row, column};
     return index;
@@ -43,7 +43,7 @@ BOOL JbEqualTableIndexes(JbTableIndex a, JbTableIndex b)
     return a.row == b.row && a.column == b.column;
 }
 
-JbTableSize JbMakeTableSize(size_t rows, size_t columns)
+JbTableSize JbMakeTableSize(unsigned rows, unsigned columns)
 {
     JbTableSize index = {rows, columns};
     return index;
@@ -54,8 +54,8 @@ BOOL JbEqualTableSizes(JbTableSize a, JbTableSize b)
     return a.rows == b.rows && a.columns == b.columns;
 }
 
-JbTableRect JbMakeTableRect(size_t fromRow, size_t fromColumn,
-                            size_t rows, size_t columns)
+JbTableRect JbMakeTableRect(unsigned fromRow, unsigned fromColumn,
+                            unsigned rows, unsigned columns)
 {
     JbTableRect rect;
     rect.origin.row = fromRow;
@@ -101,7 +101,7 @@ void JbTableIteratorFirst(JbTableIterator* it)
     it->index.column = it->end.column - 1;
 }
 
-void** JbAllocTable(size_t rows, size_t columns, size_t valueSize)
+void** JbAllocTable(unsigned rows, unsigned columns, unsigned valueSize)
 {
     size_t row;
     size_t rowIndexSize = rows * sizeof(void*);

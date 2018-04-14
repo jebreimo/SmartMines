@@ -32,14 +32,14 @@
 
 typedef struct JbTableIndexStruct
 {
-    size_t row;
-    size_t column;
+    unsigned row;
+    unsigned column;
 } JbTableIndex;
 
 typedef struct JbTableSizeStruct
 {
-    size_t rows;
-    size_t columns;
+    unsigned rows;
+    unsigned columns;
 } JbTableSize;
 
 typedef struct JbTableRectStruct
@@ -55,14 +55,14 @@ typedef struct JbTableIteratorStruct
     JbTableIndex end;
 } JbTableIterator;
 
-JbTableIndex JbMakeTableIndex(size_t row, size_t column);
+JbTableIndex JbMakeTableIndex(unsigned row, unsigned column);
 BOOL JbEqualTableIndexes(JbTableIndex a, JbTableIndex b);
 
-JbTableSize JbMakeTableSize(size_t rows, size_t columns);
+JbTableSize JbMakeTableSize(unsigned rows, unsigned columns);
 BOOL JbEqualTableSizes(JbTableSize a, JbTableSize b);
 
-JbTableRect JbMakeTableRect(size_t row, size_t column,
-                            size_t rows, size_t columns);
+JbTableRect JbMakeTableRect(unsigned row, unsigned column,
+                            unsigned rows, unsigned columns);
 BOOL JbEqualTableRects(JbTableRect a, JbTableRect b);
 
 JbTableIterator JbMakeTableIterator(unsigned rowBegin, unsigned columnBegin,
@@ -79,4 +79,4 @@ BOOL JbTableIteratorNext(JbTableIterator* iterator);
     @param valueSize the size of an individual value in the array
            (ie. sizeof(table[0][0])).
 */
-void** JbAllocTable(size_t rows, size_t columns, size_t valueSize);
+void** JbAllocTable(unsigned rows, unsigned columns, unsigned valueSize);

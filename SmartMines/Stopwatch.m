@@ -31,7 +31,7 @@
 #import "Stopwatch.h"
 #import <sys/time.h>
 
-static double GetCurrentTime();
+static double GetCurrentTime(void);
 
 @implementation JbStopwatch
 
@@ -81,7 +81,7 @@ static double GetCurrentTime();
 
 @end
 
-static double GetCurrentTime()
+static double GetCurrentTime(void)
 {
     struct timeval t;
     gettimeofday(&t, NULL);

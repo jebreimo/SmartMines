@@ -55,9 +55,9 @@ static BOOL ParseMinefieldSize(NSString* description,
 
 + (BOOL)isValidGameSize:(JbTableSize)size mines:(unsigned)mines
 {
-    return size.rows >= 5 && size.rows < 100 &&
-           size.columns >= 5 && size.columns < 100 &&
-           mines >= 0 && mines <= (size.rows * size.columns) / 2;
+    return size.rows >= 5 && size.rows < 100
+           && size.columns >= 5 && size.columns < 100
+           && mines <= (size.rows * size.columns) / 2;
 }
 
 - (id)init

@@ -349,6 +349,8 @@ static NSString* EnableKeyboardKey = @"EnableKeyboard";
                 else
                     [minefieldView setSymbol:JbMinefieldIncorrectQuestionMark atIndex:index];
                 break;
+            default:
+                break;
             }
         }
     };
@@ -488,7 +490,7 @@ static NSString* EnableKeyboardKey = @"EnableKeyboard";
 - (void)cancelMouseDownInView:(JbMinefieldView*)view atIndex:(JbTableIndex)index
 {
     JbMinefieldState state = [mMinefield state];
-    if (state != JbNotStarted && state != JbNotCompleted
+    if ((state != JbNotStarted && state != JbNotCompleted)
         || !mLoweredSquares
         || [mLoweredSquares count] == 0)
         return;

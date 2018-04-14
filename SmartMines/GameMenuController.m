@@ -117,7 +117,7 @@ NSString* JbJoinStrings(NSString* separator, NSArray* strings);
     NSMutableArray* descriptions = [NSMutableArray arrayWithCapacity:[customGamesMenu numberOfItems]];
     for (unsigned int index = FirstCustomGameEntry; index < [customGamesMenu numberOfItems]; ++index)
     {
-        JbGameMenuItem* item = [customGamesMenu itemAtIndex:index];
+        JbGameMenuItem* item = (JbGameMenuItem*)[customGamesMenu itemAtIndex:index];
         [descriptions addObject:[item gameDescription]];
     }
     NSUserDefaults* ud = [NSUserDefaults standardUserDefaults];
@@ -146,7 +146,7 @@ NSString* JbJoinStrings(NSString* separator, NSArray* strings);
 
 - (void)setTopCustomGameMenuItem:(NSMenuItem*)theMenuItem
 {
-    int index = [customGamesMenu indexOfItem:theMenuItem];
+    NSInteger index = [customGamesMenu indexOfItem:theMenuItem];
     if (index == FirstCustomGameEntry)
         return;
     else if (index == -1)
@@ -242,12 +242,12 @@ NSString* JbJoinStrings(NSString* separator, NSArray* strings);
 
 - (void)removeLeastRecentlyPlayedCustomGamesMenuItem
 {
-    JbGameMenuItem* leastRecentMenuItem = [customGamesMenu itemAtIndex:FirstCustomGameEntry];
+    JbGameMenuItem* leastRecentMenuItem = (JbGameMenuItem*)[customGamesMenu itemAtIndex:FirstCustomGameEntry];
     JbGame* leastRecentGame = [mGames gameWithDescription:[leastRecentMenuItem gameDescription]];
     int leastRecentIndex = FirstCustomGameEntry;
     for (int i = FirstCustomGameEntry + 1; i < [customGamesMenu numberOfItems]; ++i)
     {
-        JbGameMenuItem* menuItem = [customGamesMenu itemAtIndex:i];
+        JbGameMenuItem* menuItem = (JbGameMenuItem*)[customGamesMenu itemAtIndex:i];
         JbGame* game = [mGames gameWithDescription:[menuItem gameDescription]];
 
         if ([leastRecentGame isPlayedMoreRecentlyThan:game])
@@ -295,14 +295,20 @@ NSString* JbJoinStrings(NSString* separator, NSArray* strings);
     NSString* filePath = [mainBundle pathForResource:@"UserManual" ofType:@"pdf"];
     if (filePath != nil)
     {
-        NSLog(@"%s", _cmd);
-        FSRef fileRef;
-        if (FSPathMakeRef((const UInt8*)[filePath fileSystemRepresentation], &fileRef, NULL) != 0
-            || LSOpenFSRef(&fileRef, NULL) != 0)
-            [NSAlert alertWithError:[NSString stringWithFormat:@"Unable to open %@.", filePath]];
+        NSLog(@"%s", sel_getName(_cmd));
+        if (![[NSWorkspace sharedWorkspace] openURL:[NSURL fileURLWithPath: filePath]])
+        {
+            NSAlert* alert = [[[NSAlert alloc] init] autorelease];
+            alert.messageText = [NSString stringWithFormat:@"Unable to open %@.", filePath];
+            [alert runModal];
+        }
     }
     else
-        [NSAlert alertWithError:@"Unable to open UserManual.pdf"];
+    {
+        NSAlert* alert = [[[NSAlert alloc] init] autorelease];
+        alert.messageText = @"Unable to open UserManual.pdf";
+        [alert runModal];
+    }
 }
 
 - (void)applicationDidHide:(NSNotification*)theNotification

@@ -28,7 +28,7 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 //  OTHER DEALINGS IN THE SOFTWARE.
 
-#import "HighscoresWindowController.h"
+#import "HighScoresWindowController.h"
 
 #import "GameMenuItem.h"
 #import "MinefieldController.h"
@@ -180,7 +180,7 @@ static NSComparisonResult CompareGames(id entryA, id entryB, void* context)
     NSString* title = [mCurrentGame name];
     if (!title)
         title = [mCurrentGame description];
-    int index = [mGamePopUp indexOfItemWithTitle:title];
+    long index = [mGamePopUp indexOfItemWithTitle:title];
     if (index == -1)
     {
         [self fillGameMenu];

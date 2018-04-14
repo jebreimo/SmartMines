@@ -51,7 +51,8 @@ NSString* JbPathForUserApplicationSupport(NSString* applicationName)
             return path;
     }
     NSString* path = [NSString stringWithFormat:@"%@/%@", [appSuppDirs objectAtIndex:0], applicationName];
-    [fm createDirectoryAtPath:path attributes:nil];
+    [fm createDirectoryAtURL:[NSURL fileURLWithPath:path isDirectory:TRUE]
+ withIntermediateDirectories:TRUE attributes:nil error:nil];
     return path;
 }
 

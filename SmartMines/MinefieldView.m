@@ -179,7 +179,7 @@ static inline BOOL IsLessThanSize(JbTableIndex index, JbTableSize size)
          horizontalOffset:(float*)horOffset
            verticalOffset:(float*)verOffset
 {
-    unsigned rows = mMinefieldSize.rows, cols = mMinefieldSize.columns;
+    size_t rows = mMinefieldSize.rows, cols = mMinefieldSize.columns;
     NSRect bounds = [self bounds];
     *squareSize = [JbMinefieldView squareSizeForViewSize:bounds.size
                                            minefieldSize:mMinefieldSize];
@@ -277,7 +277,7 @@ static inline BOOL IsLessThanSize(JbTableIndex index, JbTableSize size)
     NSBezierPath* path = [NSBezierPath bezierPath];
     [path setLineWidth:thickness];
     [path setLineCapStyle:NSRoundLineCapStyle];
-    [path setLineJoinStyle:NSCurveToBezierPathElement];
+    [path setLineJoinStyle:NSBevelLineJoinStyle];
 
     [[NSColor colorWithDeviceWhite:1.0 alpha:0.5] set];
     [path moveToPoint:rect.origin];
@@ -620,7 +620,7 @@ static inline BOOL IsLessThanSize(JbTableIndex index, JbTableSize size)
 
 - (void)mouseDown:(NSEvent*)theEvent
 {
-    mIsControlClicking = ([theEvent modifierFlags] & NSControlKeyMask) == NSControlKeyMask;
+    mIsControlClicking = ([theEvent modifierFlags] & NSEventModifierFlagControl) == NSEventModifierFlagControl;
     if (mIsControlClicking)
         [self rightMouseDown:theEvent];
 
@@ -855,7 +855,7 @@ static NSArray* StringTuple(NSString* str, NSColor* color)
 {
     NSMutableParagraphStyle* paragraphStyle = [[[NSMutableParagraphStyle alloc] init] autorelease];
     [paragraphStyle setParagraphStyle:[NSParagraphStyle defaultParagraphStyle]];
-    [paragraphStyle setAlignment:NSCenterTextAlignment];
+    [paragraphStyle setAlignment:NSTextAlignmentCenter];
     NSArray* objs = [NSArray arrayWithObjects:color, paragraphStyle, nil];
     NSArray* keys = [NSArray arrayWithObjects:NSForegroundColorAttributeName,
                                               NSParagraphStyleAttributeName,
